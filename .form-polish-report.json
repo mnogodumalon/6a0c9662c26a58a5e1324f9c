@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["kundentyp"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity für Kundenverwaltung. Keine numerischen Felder, keine applookups, keine Berechnungen möglich. Kundentyp wird auf Privatkunde vorbelegt."
+    },
+    "Motivkatalog": {
+      "placeholders_set": 8,
+      "defaults_keys": ["aktiv"],
+      "computed_keys": [],
+      "reason": "Katalog-Master-Daten mit Dimensionen und Preis-pro-qm. Keine Bestellmenge oder Multiplizierung nötig. Aktiv-Flag wird auf true vorbelegt (Neuware). Keine computed-Formeln sinnvoll ohne Bestellkontext."
+    },
+    "Auftragsverwaltung": {
+      "placeholders_set": 16,
+      "defaults_keys": ["auftragsdatum", "status", "wunschlieferdatum", "anzahl"],
+      "computed_keys": [],
+      "reason": "Auftrag mit Kundenbezug und Motivauswahl. Number-Felder (breite, hoehe, anzahl) sind Eingaben, multipleapplookup auf Motivkatalog hat preis_pro_qm, aber kein Backend-Feld für Gesamtkosten vorhanden. Keine Preis-Rechnung im Schema abgebildet. Status wird auf 'Neu', Auftragsdatum auf heute, Lieferdatum auf heute+14, Anzahl auf 1 gesetzt."
+    },
+    "Produktionsplanung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["geplantes_druckdatum", "druckstatus"],
+      "computed_keys": [],
+      "reason": "Produktions-Tracking zum Auftrag. Keine numerischen Felder außer Applookup-Targets. Datumspaar geplant/tatsächlich sind reine Erfassungsfelder. Druckstatus wird auf 'Geplant' vorbelegt, geplantes Druckdatum auf heute."
+    },
+    "Rechnungsverwaltung": {
+      "placeholders_set": 14,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "mwst_satz", "zahlungsstatus"],
+      "computed_keys": ["mwst_betrag", "gesamtbetrag"],
+      "reason": "Klassische Brutto-Netto-Rechnungslogik mit expliziter netto/mwst/brutto Feldteilung. MwSt.-Satz ist lookup/radio mit Prozentoptionen (19%, 7%, 0%). mwst_betrag wird über MODUS-2-Funktion mit satzabhängiger Berechnung berechnet, gesamtbetrag = netto + mwst (MODUS-1). Rechnungsdatum auf heute, Fälligkeitsdatum auf heute+14, MwSt.-Satz auf 19%, Zahlungsstatus auf 'Offen' vorbelegt."
+    }
+  }
+}

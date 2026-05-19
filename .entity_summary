@@ -1,0 +1,10 @@
+- Kundenverwaltung (kundenverwaltung): vorname[string/text], nachname[string/text], unternehmen[string/text], kundentyp[lookup/radio], email[string/email], telefon[string/tel], strasse[string/text], hausnummer[string/text], postleitzahl[string/text], ort[string/text], land[string/text], anmerkungen[string/textarea]
+- Motivkatalog (motivkatalog): beschreibung[string/textarea], kategorie[lookup/select], max_breite_cm[number], max_hoehe_cm[number], material[multiplelookup/checkbox], preis_pro_qm[number], vorschaubild[file], aktiv[bool], motivname[string/text]
+- Auftragsverwaltung (auftragsverwaltung): auftragsnummer[string/text], auftragsdatum[date/date], status[lookup/select], kunde[applookup/select], motive[multipleapplookup/select], breite_cm[number], hoehe_cm[number], anzahl[number], material_auswahl[lookup/select], wunschlieferdatum[date/date], montage_gewuenscht[bool], lieferadresse_abweichend[bool], lieferstrasse[string/text], lieferhausnummer[string/text], lieferpostleitzahl[string/text], lieferort[string/text], sonderwuensche[string/textarea], interne_notizen[string/textarea]
+  → kunde links to app_id 6a0c963019308b30eb172e5a
+  → motive links to app_id 6a0c963b2b58ecdaddd9c45a
+- Produktionsplanung (produktionsplanung): tatsaechliches_druckdatum[date/date], drucker[lookup/select], zustaendiger_mitarbeiter[string/text], druckstatus[lookup/select], qualitaetspruefung_bestanden[bool], produktionsanmerkungen[string/textarea], produktionsnummer[string/text], auftrag[applookup/select], geplantes_druckdatum[date/date]
+  → auftrag links to app_id 6a0c963cb70cf78c53ae48f5
+- Rechnungsverwaltung (rechnungsverwaltung): rechnungsnummer[string/text], rechnungsdatum[date/date], faelligkeitsdatum[date/date], auftrag[applookup/select], kunde[applookup/select], nettobetrag[number], mwst_satz[lookup/radio], mwst_betrag[number], gesamtbetrag[number], zahlungsart[lookup/select], zahlungsstatus[lookup/select], zahlungsdatum[date/date], rechnungsanmerkungen[string/textarea]
+  → auftrag links to app_id 6a0c963cb70cf78c53ae48f5
+  → kunde links to app_id 6a0c963019308b30eb172e5a

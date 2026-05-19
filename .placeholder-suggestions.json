@@ -1,0 +1,70 @@
+{
+  "KundenverwaltungDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Mustermann",
+    "unternehmen": "z. B. WandArt GmbH",
+    "email": "kontakt@beispiel.de",
+    "strasse": "z. B. Musterstraße",
+    "hausnummer": "z. B. 42",
+    "postleitzahl": "z. B. 12345",
+    "ort": "z. B. Musterstadt",
+    "land": "z. B. Deutschland",
+    "anmerkungen": "Besondere Wünsche, bevorzugte Kontaktzeiten..."
+  },
+  "MotivkatalogDialog.tsx": {
+    "motivname": "z. B. Sonnenuntergang am Meer",
+    "beschreibung": "Bilddetails, Stil, Inspirationsquelle...",
+    "kategorie": "Welche Kategorie passt?",
+    "material": "Materialien wählen",
+    "max_breite_cm": "z. B. 150",
+    "max_hoehe_cm": "z. B. 200",
+    "preis_pro_qm": "z. B. 49,99",
+    "aktiv": "Soll das Motiv im Angebot verfügbar sein?"
+  },
+  "AuftragsverwaltungDialog.tsx": {
+    "auftragsnummer": "z. B. AU-2025-001",
+    "auftragsdatum": "Wann wurde der Auftrag erteilt?",
+    "status": "Aktueller Bearbeitungsstand?",
+    "kunde": "Welcher Kunde?",
+    "motive": "Welche Motive wählen?",
+    "breite_cm": "z. B. 120",
+    "hoehe_cm": "z. B. 80",
+    "anzahl": "z. B. 1",
+    "material_auswahl": "Welches Material?",
+    "wunschlieferdatum": "Lieferwunsch?",
+    "montage_gewuenscht": "Montage durchführen?",
+    "lieferadresse_abweichend": "Andere Adresse als Kunde?",
+    "lieferstrasse": "z. B. Lieferstraße 10",
+    "lieferhausnummer": "z. B. 5a",
+    "lieferpostleitzahl": "z. B. 67890",
+    "lieferort": "z. B. Lieferstadt",
+    "sonderwuensche": "Besondere Anforderungen, Fristen...",
+    "interne_notizen": "Notizen für das Team..."
+  },
+  "ProduktionsplanungDialog.tsx": {
+    "produktionsnummer": "z. B. PD-2025-001",
+    "auftrag": "Welcher Auftrag wird produziert?",
+    "geplantes_druckdatum": "Wann ist der Druck geplant?",
+    "drucker": "Welcher Drucker?",
+    "zustaendiger_mitarbeiter": "z. B. Max Müller",
+    "druckstatus": "Aktueller Druckfortschritt?",
+    "tatsaechliches_druckdatum": "Tatsächlicher Druckdatum?",
+    "qualitaetspruefung_bestanden": "QS bestanden?",
+    "produktionsanmerkungen": "Besonderheiten, Fehler, Optimierungen..."
+  },
+  "RechnungsverwaltungDialog.tsx": {
+    "rechnungsnummer": "z. B. R-2025-001",
+    "rechnungsdatum": "Wann wurde die Rechnung gestellt?",
+    "faelligkeitsdatum": "Fällig in wie vielen Tagen?",
+    "auftrag": "Welcher Auftrag?",
+    "kunde": "Rechnungsempfänger?",
+    "nettobetrag": "z. B. 500,00",
+    "mwst_satz": "Steuersatz wählen",
+    "mwst_betrag": "Wird automatisch berechnet",
+    "gesamtbetrag": "Wird automatisch berechnet",
+    "zahlungsart": "Wie wird bezahlt?",
+    "zahlungsstatus": "Zahlungsstatus?",
+    "zahlungsdatum": "Wann bezahlt?",
+    "rechnungsanmerkungen": "Zahlungsbedingungen, Referenzen..."
+  }
+}

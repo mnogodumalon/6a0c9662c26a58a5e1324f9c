@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "kundenverwaltung",
+      "app_id": "6a0c963019308b30eb172e5a",
+      "path": "/rest/apps/6a0c963019308b30eb172e5a/records",
+      "allowed_fields": [
+        "vorname",
+        "nachname",
+        "unternehmen",
+        "kundentyp",
+        "email",
+        "telefon",
+        "strasse",
+        "hausnummer",
+        "postleitzahl",
+        "ort",
+        "land",
+        "anmerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Kundenverwaltung — Formular"
+    },
+    {
+      "entity": "motivkatalog",
+      "app_id": "6a0c963b2b58ecdaddd9c45a",
+      "path": "/rest/apps/6a0c963b2b58ecdaddd9c45a/records",
+      "allowed_fields": [
+        "beschreibung",
+        "kategorie",
+        "max_breite_cm",
+        "max_hoehe_cm",
+        "material",
+        "preis_pro_qm",
+        "aktiv",
+        "motivname"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Motivkatalog — Formular"
+    },
+    {
+      "entity": "auftragsverwaltung",
+      "app_id": "6a0c963cb70cf78c53ae48f5",
+      "path": "/rest/apps/6a0c963cb70cf78c53ae48f5/records",
+      "allowed_fields": [
+        "auftragsnummer",
+        "auftragsdatum",
+        "status",
+        "motive",
+        "breite_cm",
+        "hoehe_cm",
+        "anzahl",
+        "material_auswahl",
+        "wunschlieferdatum",
+        "montage_gewuenscht",
+        "lieferadresse_abweichend",
+        "lieferstrasse",
+        "lieferhausnummer",
+        "lieferpostleitzahl",
+        "lieferort",
+        "sonderwuensche",
+        "interne_notizen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Auftragsverwaltung — Formular"
+    },
+    {
+      "entity": "produktionsplanung",
+      "app_id": "6a0c963da5117dc0bec710a2",
+      "path": "/rest/apps/6a0c963da5117dc0bec710a2/records",
+      "allowed_fields": [
+        "tatsaechliches_druckdatum",
+        "drucker",
+        "zustaendiger_mitarbeiter",
+        "druckstatus",
+        "qualitaetspruefung_bestanden",
+        "produktionsanmerkungen",
+        "produktionsnummer",
+        "geplantes_druckdatum"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Produktionsplanung — Formular"
+    },
+    {
+      "entity": "rechnungsverwaltung",
+      "app_id": "6a0c963dfa85ba0c705b1848",
+      "path": "/rest/apps/6a0c963dfa85ba0c705b1848/records",
+      "allowed_fields": [
+        "rechnungsnummer",
+        "rechnungsdatum",
+        "faelligkeitsdatum",
+        "nettobetrag",
+        "mwst_satz",
+        "mwst_betrag",
+        "gesamtbetrag",
+        "zahlungsart",
+        "zahlungsstatus",
+        "zahlungsdatum",
+        "rechnungsanmerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Rechnungsverwaltung — Formular"
+    }
+  ]
+}
