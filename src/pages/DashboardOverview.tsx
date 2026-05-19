@@ -27,6 +27,7 @@ import {
   IconCurrencyEuro,
   IconClock,
   IconTruck,
+  IconChevronRight,
 } from '@tabler/icons-react';
 
 const APPGROUP_ID = '6a0c9662c26a58a5e1324f9c';
@@ -123,6 +124,29 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Workflow-Navigation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="#/intents/auftragserfassung" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <div className="flex-shrink-0 p-2 bg-primary/10 rounded-lg">
+            <IconClipboardList size={24} className="text-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-semibold text-foreground truncate">Neuen Auftrag erfassen</div>
+            <div className="text-sm text-muted-foreground truncate">Kunde auswählen, Motiv wählen & Auftrag anlegen</div>
+          </div>
+          <IconChevronRight size={18} className="text-muted-foreground flex-shrink-0" />
+        </a>
+        <a href="#/intents/auftragsabschluss" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <div className="flex-shrink-0 p-2 bg-primary/10 rounded-lg">
+            <IconCheck size={24} className="text-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-semibold text-foreground truncate">Auftrag abschließen</div>
+            <div className="text-sm text-muted-foreground truncate">Produktion planen, Rechnung erstellen & fertigstellen</div>
+          </div>
+          <IconChevronRight size={18} className="text-muted-foreground flex-shrink-0" />
+        </a>
+      </div>
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>

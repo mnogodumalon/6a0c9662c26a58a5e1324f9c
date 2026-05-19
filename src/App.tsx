@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import KundenverwaltungPage from '@/pages/KundenverwaltungPage';
 import MotivkatalogPage from '@/pages/MotivkatalogPage';
@@ -21,6 +20,8 @@ import PublicFormRechnungsverwaltung from '@/pages/public/PublicForm_Rechnungsve
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const AuftragserfassungPage = lazy(() => import('@/pages/intents/AuftragserfassungPage'));
+const AuftragsabschlussPage = lazy(() => import('@/pages/intents/AuftragsabschlussPage'));
 // </custom:imports>
 
 export default function App() {
@@ -38,7 +39,7 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="kundenverwaltung" element={<KundenverwaltungPage />} />
                 <Route path="motivkatalog" element={<MotivkatalogPage />} />
                 <Route path="auftragsverwaltung" element={<AuftragsverwaltungPage />} />
@@ -46,6 +47,8 @@ export default function App() {
                 <Route path="rechnungsverwaltung" element={<RechnungsverwaltungPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/auftragserfassung" element={<Suspense fallback={null}><AuftragserfassungPage /></Suspense>} />
+                <Route path="intents/auftragsabschluss" element={<Suspense fallback={null}><AuftragsabschlussPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
